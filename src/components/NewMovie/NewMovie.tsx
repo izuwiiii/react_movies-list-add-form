@@ -16,7 +16,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
   const [imdbUrl, setImdbUrl] = useState('');
   const [imdbId, setImdbId] = useState('');
 
-  const isButtonDisabled =
+  const isButtonEnabled =
     title.trim().length > 0 &&
     imgUrl.trim().length > 0 &&
     imdbUrl.trim().length > 0 &&
@@ -67,7 +67,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
 
       <div className="field is-grouped">
         <div className="control">
-          {isButtonDisabled ? (
+          {isButtonEnabled ? (
             <button
               type="submit"
               data-cy="submit-button"
